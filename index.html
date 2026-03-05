@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GGS Transport | Livraison & Logistique Réunion</title>
+    
+    <meta name="google-site-verification" content="L-evEdU90en_KA4OViGHfN_QyJk37qmnh2wVsCRcgrs" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17991508938"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17991748652"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17991508938');
+      gtag('config', 'AW-17991748652');
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .bg-custom-orange { background-color: #FF9100; }
+        .text-custom-orange { color: #FF9100; }
+        .bg-custom-yellow { background-color: #FFD600; }
+        html { scroll-behavior: smooth; }
+        
+        /* Spinner pour les boutons */
+        .loader { 
+            border: 3px solid rgba(255,255,255,0.3); 
+            border-top: 3px solid #FF9100; 
+            border-radius: 50%; 
+            width: 18px; 
+            height: 18px; 
+            animation: spin 0.8s linear infinite; 
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        /* Animation WhatsApp */
+        .whatsapp-float {
+            position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px;
+            background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center;
+            font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 100;
+            display: flex; align-items: center; justify-content: center;
+            transition: transform 0.3s;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); color: white; }
+    </style>
+</head>
+<body class="bg-white text-gray-900 antialiased font-sans">
+
+    <a href="https://wa.me/262693922935" class="whatsapp-float" target="_blank">
+        <svg width="35" height="35" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.319 1.592 5.548 0 10.061-4.512 10.063-10.062a10.024 10.024 0 00-2.943-7.132 10.016 10.016 0 00-7.131-2.939c-5.549 0-10.06 4.514-10.063 10.064-.001 2.032.547 3.478 1.534 5.148l-1.004 3.673 3.771-.989zm11.315-7.438c-.31-.156-1.834-.905-2.112-1.006-.279-.101-.481-.151-.681.151-.201.302-.777 1.006-.952 1.208-.176.201-.351.227-.661.07-.31-.156-1.307-.482-2.489-1.537-.918-.818-1.538-1.829-1.718-2.131-.181-.302-.018-.465.137-.619.14-.139.31-.362.465-.544.155-.181.206-.312.31-.519.103-.207.052-.388-.026-.544-.077-.156-.681-1.641-.933-2.248-.246-.593-.496-.513-.681-.523-.176-.01-.378-.011-.581-.011-.203 0-.533.076-.812.378-.279.302-1.065 1.042-1.065 2.543 0 1.502 1.09 2.956 1.24 3.158.151.201 2.146 3.277 5.198 4.593.725.312 1.291.499 1.732.639.73.232 1.393.199 1.918.121.585-.088 1.834-.751 2.092-1.479.258-.727.258-1.35.181-1.479-.077-.129-.284-.207-.594-.363z"/></svg>
+    </a>
+
+    <nav class="bg-black text-white sticky top-0 z-50 shadow-lg border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                <span class="text-3xl font-black tracking-tighter text-custom-orange italic">GGS</span>
+                <span class="text-xl font-light tracking-widest border-l-2 border-custom-yellow pl-3 uppercase">Transport</span>
+            </div>
+            <div class="hidden md:flex space-x-6 font-medium uppercase text-[11px] tracking-widest">
+                <a href="#accueil" class="hover:text-custom-orange transition">Accueil</a>
+                <a href="#services" class="hover:text-custom-orange transition">Services</a>
+                <a href="#zone" class="hover:text-custom-orange transition">Secteur</a>
+                <a href="#devis" class="hover:text-custom-orange transition font-bold text-custom-orange">Devis</a>
+                <a href="#suivi" class="hover:text-custom-orange transition italic underline">Suivi Colis</a>
+                <a href="#avis" class="hover:text-custom-orange transition">Avis</a>
+                <a href="#contact" class="hover:text-custom-orange transition">Contact</a>
+            </div>
+            <a href="tel:0693922935" class="bg-custom-orange text-black font-bold px-4 py-2 rounded uppercase text-xs">06 93 92 29 35</a>
+        </div>
+    </nav>
+
+    <header id="accueil" class="relative bg-black h-[85vh] flex items-center overflow-hidden">
+        <div class="absolute inset-0 opacity-40">
+            <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover">
+        </div>
+        <div class="relative max-w-7xl mx-auto px-6 z-10 text-white">
+            <h1 class="text-5xl md:text-8xl font-black uppercase italic leading-none mb-6">
+                Votre marchandise, <br><span class="text-custom-orange">notre priorité.</span>
+            </h1>
+            <p class="text-gray-300 text-xl max-w-2xl mb-10 border-l-4 border-custom-yellow pl-4 italic">
+                Transport, déménagement et livraison express sur toute l'île de la Réunion.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#devis" class="bg-custom-orange text-black font-black py-4 px-10 rounded uppercase text-sm shadow-xl hover:bg-white transition duration-300">Demander un Devis</a>
+                <a href="#suivi" class="bg-white text-black font-black py-4 px-10 rounded uppercase text-sm shadow-xl hover:bg-custom-orange transition duration-300">Suivre mon Colis</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="services" class="py-24 bg-gray-50 text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-black uppercase italic mb-16">Nos Services Professionnels</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-8 border-b-4 border-black hover:border-custom-orange transition shadow-lg group">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition">🚚</div>
+                    <h4 class="font-bold uppercase mb-2">Transport</h4>
+                    <p class="text-gray-600 text-sm italic">Palettes et gros volumes en toute sécurité.</p>
+                </div>
+                <div class="bg-white p-8 border-b-4 border-black hover:border-custom-orange transition shadow-lg group">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition">📦</div>
+                    <h4 class="font-bold uppercase mb-2">Livraison</h4>
+                    <p class="text-gray-600 text-sm italic">Retrait magasin et express à domicile.</p>
+                </div>
+                <div class="bg-white p-8 border-b-4 border-black hover:border-custom-orange transition shadow-lg group">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition">🏠</div>
+                    <h4 class="font-bold uppercase mb-2">Déménagement</h4>
+                    <p class="text-gray-600 text-sm italic">Prise en charge de vos meubles avec soin.</p>
+                </div>
+                <div class="bg-white p-8 border-b-4 border-black hover:border-custom-orange transition shadow-lg group">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition">♻️</div>
+                    <h4 class="font-bold uppercase mb-2">Encombrants</h4>
+                    <p class="text-gray-600 text-sm italic">Évacuation vers les centres de traitement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="zone" class="py-24 bg-black text-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-4xl font-black uppercase italic mb-6">Secteur d'intervention</h2>
+                <p class="text-xl text-gray-400 mb-8 italic">Basés à <span class="text-custom-orange font-bold uppercase">Saint-Denis</span>, nous couvrons toute l'île.</p>
+                <div class="grid grid-cols-2 gap-4 text-xs font-bold uppercase tracking-[0.2em]">
+                    <div class="flex items-center"><span class="text-custom-orange mr-3 text-xl">📍</span> Nord</div>
+                    <div class="flex items-center"><span class="text-custom-orange mr-3 text-xl">📍</span> Ouest</div>
+                    <div class="flex items-center"><span class="text-custom-orange mr-3 text-xl">📍</span> Sud</div>
+                    <div class="flex items-center"><span class="text-custom-orange mr-3 text-xl">📍</span> Est</div>
+                </div>
+            </div>
+            <div class="relative bg-zinc-900 p-2 rounded-xl border border-zinc-800 shadow-2xl overflow-hidden">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.1234!2d55.44!3d-20.88!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDUyJzQ4LjAiUyA1NcKwMjYnMjQuMCJF!5e0!3m2!1sfr!2sre!4v1700000000000" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="devis" class="py-24 bg-white">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-4xl font-black uppercase italic mb-12 text-center">Devis Gratuit en 24h</h2>
+            <form id="devisForm" class="bg-white p-8 border-2 border-black shadow-[15px_15px_0px_0px_rgba(255,145,0,1)] space-y-4">
+                <div class="grid md:grid-cols-2 gap-4">
+                    <input type="text" id="nomDevis" placeholder="Votre Nom / Société" required class="p-4 border-2 border-gray-100 outline-none focus:border-custom-orange font-bold">
+                    <input type="tel" id="telDevis" placeholder="Votre Téléphone" required class="p-4 border-2 border-gray-100 outline-none focus:border-custom-orange font-bold">
+                </div>
+                <textarea id="msgDevis" placeholder="Détail de la marchandise (volume, poids, trajet...)" rows="4" class="w-full p-4 border-2 border-gray-100 outline-none focus:border-custom-orange font-bold" required></textarea>
+                <button type="button" onclick="envoyerDonnees('devis')" id="btnDevis" class="w-full bg-black text-white font-black py-5 uppercase hover:bg-custom-orange transition">Envoyer ma demande</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="suivi" class="py-24 bg-zinc-950 text-white text-center">
+        <div class="max-w-2xl mx-auto px-6">
+            <h2 class="text-3xl font-black uppercase italic mb-8 text-custom-orange">Suivi de livraison</h2>
+            <div class="flex gap-2 mb-4">
+                <input type="text" id="trackInput" placeholder="N° DE BON (ex: 101)" class="flex-1 p-4 text-black font-bold uppercase outline-none focus:ring-4 ring-custom-orange">
+                <button id="btnTrack" onclick="rechercherColis()" class="bg-custom-orange text-black px-10 font-black uppercase hover:bg-white transition flex items-center justify-center min-w-[140px]">
+                    Vérifier
+                </button>
+            </div>
+            <div id="trackResult" class="hidden mt-8 p-8 border-2 border-custom-orange bg-zinc-900 text-left">
+                <div class="flex justify-between items-center mb-6">
+                    <span id="s-status" class="bg-black text-white px-3 py-1 text-xs font-bold uppercase border border-zinc-700 tracking-widest">--</span>
+                    <span id="s-id" class="font-mono font-bold text-custom-orange italic">#---</span>
+                </div>
+                <p id="s-detail" class="text-gray-300 font-bold mb-6 italic">Chargement...</p>
+                <div class="h-4 bg-zinc-800 rounded-full overflow-hidden border border-zinc-700">
+                    <div id="s-progress" class="h-full bg-custom-orange shadow-[0_0_15px_#FF9100]" style="width: 0%; transition: width 1.5s ease-out;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="avis" class="py-24 bg-gray-50 text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-black uppercase italic mb-12 underline decoration-custom-orange">Avis Clients</h2>
+            <div id="listeAvis" class="grid md:grid-cols-3 gap-6 mb-12 text-left">
+                <p class="col-span-full text-center text-gray-400 italic">Chargement des avis...</p>
+            </div>
+            <div class="bg-white p-10 shadow-xl border-t-8 border-black text-left">
+                <h3 class="font-black uppercase mb-6 italic">Laissez votre avis</h3>
+                <form id="avisForm" class="space-y-4">
+                    <input type="text" id="nomAvis" placeholder="Votre Prénom" required class="w-full p-4 border border-gray-200 outline-none font-bold focus:border-black">
+                    <textarea id="msgAvis" placeholder="Votre expérience..." required class="w-full p-4 border border-gray-200 outline-none font-bold focus:border-black"></textarea>
+                    <button type="button" onclick="envoyerDonnees('avis')" id="btnAvis" class="bg-black text-white px-10 py-4 font-black uppercase text-xs hover:bg-custom-orange transition w-full">Publier mon avis</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-black uppercase italic mb-16 text-center">Nous Contacter</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="p-10 bg-black text-white rounded-lg border-b-8 border-custom-orange shadow-xl">
+                    <div class="text-4xl mb-4">📞</div>
+                    <p class="text-custom-orange uppercase text-xs font-bold">Grégory</p>
+                    <a href="tel:0693922935" class="text-2xl font-black italic tracking-tighter">06 93 92 29 35</a>
+                </div>
+                <div class="p-10 bg-black text-white rounded-lg border-b-8 border-custom-orange shadow-xl">
+                    <div class="text-4xl mb-4">📧</div>
+                    <p class="text-custom-orange uppercase text-xs font-bold">Email</p>
+                    <a href="mailto:gregory@ggs-transport.com" class="text-lg font-bold italic">gregory@ggs-transport.com</a>
+                </div>
+                <div class="p-10 bg-black text-white rounded-lg border-b-8 border-custom-orange shadow-xl">
+                    <div class="text-4xl mb-4">🏠</div>
+                    <p class="text-custom-orange uppercase text-xs font-bold">Adresse</p>
+                    <p class="font-bold">18 Chem. Dufourg les Bas,<br>Saint-Denis 97490</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-10 text-center border-t border-zinc-800">
+        <p class="text-gray-500 text-[10px] uppercase tracking-[0.5em] font-bold">© 2026 GGS Transport - La Réunion</p>
+    </footer>
+
+    <script>
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxVsIKQRmkVC9I7aU5S59eugohZPjRd_gyYlNOGVY9NFOdZsTzNP5TLe1Vf8Lugut_BNA/exec";
+
+        // 1. CHARGEMENT AUTOMATIQUE DES AVIS
+        async function chargerAvis() {
+            const conteneur = document.getElementById('listeAvis');
+            try {
+                const response = await fetch(SCRIPT_URL);
+                const avis = await response.json();
+                if (!avis || avis.length === 0 || avis.error) {
+                    conteneur.innerHTML = '<p class="col-span-full text-center italic text-gray-500">Aucun avis pour le moment.</p>';
+                    return;
+                }
+                conteneur.innerHTML = '';
+                avis.forEach(item => {
+                    const html = `
+                        <div class="bg-white p-6 shadow-md border-l-4 border-custom-orange transform hover:-translate-y-1 transition duration-300">
+                            <div class="text-yellow-400 text-xs mb-2">★★★★★</div>
+                            <p class="text-gray-700 italic text-sm mb-4">"${item.message}"</p>
+                            <p class="font-black uppercase text-[10px] tracking-widest text-black border-t pt-2">${item.nom}</p>
+                        </div>`;
+                    conteneur.insertAdjacentHTML('beforeend', html);
+                });
+            } catch (e) {
+                conteneur.innerHTML = '<p class="col-span-full text-center text-red-500">Erreur lors de la récupération des avis.</p>';
+            }
+        }
+
+        // 2. ENVOI DES DONNÉES SANS RECHARGER LA PAGE
+        async function envoyerDonnees(type) {
+            let payload = { action: type };
+            let btnId = type === 'devis' ? 'btnDevis' : 'btnAvis';
+            let formId = type === 'devis' ? 'devisForm' : 'avisForm';
+            const btn = document.getElementById(btnId);
+            const form = document.getElementById(formId);
+            const originalText = btn.innerText;
+
+            if (type === 'devis') {
+                payload.client = document.getElementById('nomDevis').value + " (Tel: " + document.getElementById('telDevis').value + ")";
+                payload.prestation = document.getElementById('msgDevis').value;
+            } else {
+                payload.nom = document.getElementById('nomAvis').value;
+                payload.message = document.getElementById('msgAvis').value;
+            }
+
+            btn.disabled = true;
+            btn.innerHTML = '<div class="loader"></div> Envoi...';
+
+            try {
+                await fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: JSON.stringify(payload) });
+                btn.innerHTML = "✅ Reçu ! Merci.";
+                btn.classList.add('bg-green-600');
+                form.reset();
+                if (type === 'avis') { setTimeout(chargerAvis, 2000); }
+                setTimeout(() => {
+                    btn.disabled = false; btn.innerText = originalText; btn.classList.remove('bg-green-600');
+                }, 4000);
+            } catch (e) { 
+                alert("Erreur de connexion."); btn.disabled = false; btn.innerText = originalText;
+            }
+        }
+
+        // 3. SUIVI DE COLIS OPTIMISÉ (AVEC PROGRESSION ANIMÉE)
+        async function rechercherColis() {
+            const idInput = document.getElementById('trackInput');
+            const id = idInput.value.trim();
+            const resDiv = document.getElementById('trackResult');
+            const progressBar = document.getElementById('s-progress');
+            const btn = document.getElementById('btnTrack');
+            
+            if(!id) return;
+
+            btn.disabled = true;
+            btn.innerHTML = '<div class="loader"></div>';
+            
+            // Reset de la barre avant nouvelle recherche
+            resDiv.classList.add('hidden');
+            progressBar.style.transition = 'none';
+            progressBar.style.width = '0%';
+
+            try {
+                const response = await fetch(`${SCRIPT_URL}?id=${id}`);
+                const data = await response.json();
+                if (!data.error) {
+                    resDiv.classList.remove('hidden');
+                    document.getElementById('s-id').innerText = "#" + id;
+                    document.getElementById('s-status').innerText = data.statut;
+                    document.getElementById('s-detail').innerText = data.details;
+
+                    // Délai pour lancer l'animation de la barre
+                    setTimeout(() => {
+                        progressBar.style.transition = 'width 1.5s ease-out';
+                        progressBar.style.width = data.progres + "%";
+                    }, 50);
+
+                    resDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                } else { alert("Code introuvable."); }
+            } catch (e) { alert("Erreur."); }
+            finally {
+                btn.disabled = false;
+                btn.innerText = "Vérifier";
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', chargerAvis);
+    </script>
+</body>
+</html>
